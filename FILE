@@ -1,0 +1,29 @@
+import os
+#creating a new file
+f=open("far.txt","w+")
+for i in range(10):
+	f.write("This is a line\n")
+f.close()
+#reading a file
+"""fi=open("far.txt","r")
+if fi.mode=="r":
+	cont=fi.read()
+	print(cont)"""
+#count the number of lines presents in the file
+f=open("far.txt","r")
+count=0
+for line in f:
+    count=count+1
+print("lines counted",count)
+#append a file
+f=open("far.txt","a+")
+for i in range (2):
+ 	f.write("This line is appended\n")
+f.close() 
+#read the file after appending	
+fi=open("far.txt","r")
+if fi.mode=="r":
+	cont=fi.read()
+	print(cont)
+#rename the file name
+#os.rename("far.txt","had.txt")	
